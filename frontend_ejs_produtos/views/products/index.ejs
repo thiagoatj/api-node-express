@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Produtos</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Catálogo de Produtos</h1>
+    <p class="subtitulo">Gerenciamento de produtos via API</p>
+  </header>
+
+  <main>
+    <%/* Mensagens de feedback (sucesso ou erro) */%>
+    <% if (mensagem) { %>
+      <div class="mensagem <%= tipoMensagem === 'erro' ? 'mensagem-erro' : 'mensagem-sucesso' %>">
+        <%= mensagem %>
+      </div>
+    <% } %>
+
+    <div class="acoes-topo">
+      <a href="/produtos/novo" class="btn btn-cadastrar">+ Novo Produto</a>
+    </div>
+
+    <% if (produtos.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Qtde. Estoque</th>
+            <th>Preço (R$)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% produtos.forEach(produto => { %>
+            <tr>
+              <td data-label="ID"><%= produto._id %></td>
+              <td data-label="Nome"><%= produto.nome %></td>
+              <td data-label="Qtde. Estoque"><%= produto.qtdeEstoque %></td>
+              <td data-label="Preço (R$)">
+                R$ <%= Number(produto.preco).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) %>
+              </td>
+              <td data-label="Ações" class="acoes">
+                <a href="/produtos/<%= produto._id %>/editar" class="btn btn-editar">Editar</a>
+                <form action="/produtos/<%= produto._id %>/excluir" method="POST" class="form-excluir"
+                      onsubmit="return confirm('Tem certeza que deseja excluir o produto &quot;<%= produto.nome %>&quot;?')">
+                  <button type="submit" class="btn btn-excluir">Excluir</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else if (!mensagem) { %>
+      <p class="vazio">Nenhum produto cadastrado.</p>
+    <% } %>
+  </main>
+
+  <footer>
+    <p>Atividade 3.1 — Front-end com Express e EJS | Consumindo API em http://localhost:3000</p>
+  </footer>
+</body>
+</html>
+

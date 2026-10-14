@@ -1,0 +1,323 @@
+/* ============================================================
+   Catálogo de Produtos — Estilos do Front-end EJS
+   ============================================================ */
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+header .subtitulo {
+  font-size: 0.95rem;
+  color: #bdc3c7;
+}
+
+header .subtitulo a {
+  color: #85c1e9;
+  text-decoration: none;
+}
+
+header .subtitulo a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Mensagens de feedback */
+.mensagem {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.mensagem-sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensagem-erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Ações do topo */
+.acoes-topo {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background-color: #34495e;
+  color: #fff;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.15s;
+}
+
+tbody tr:hover {
+  background-color: #f7f9fc;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Coluna de ações */
+.acoes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-excluir {
+  display: inline;
+}
+
+/* Texto vazio */
+.vazio {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-cadastrar {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.btn-cadastrar:hover {
+  background-color: #219a52;
+}
+
+.btn-editar {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background-color: #2471a3;
+}
+
+.btn-excluir {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
+}
+
+.btn-cancelar {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+.btn-cancelar:hover {
+  background-color: #7f8c8d;
+}
+
+/* Formulários */
+.formulario {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.15);
+}
+
+.obrigatorio {
+  color: #e74c3c;
+}
+
+.campo-botoes {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.campo-botoes .btn {
+  flex: 1;
+  padding: 0.65rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Tabela responsiva: empilha as células */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 0.75rem;
+    background-color: #fff;
+  }
+
+  td {
+    padding: 0.4rem 0.75rem;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.75rem;
+    font-weight: 600;
+    text-align: left;
+    color: #2c3e50;
+  }
+
+  .acoes {
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+
+  .acoes::before {
+    display: none;
+  }
+
+  .formulario {
+    padding: 1.25rem;
+  }
+
+  .campo-botoes {
+    flex-direction: column;
+  }
+}
+

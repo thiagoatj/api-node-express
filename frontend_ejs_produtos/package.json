@@ -1,0 +1,23 @@
+{
+  "name": "frontend_ejs_produtos",
+  "version": "1.0.0",
+  "description": "Front-end com Express e EJS para consumir a API CRUD de Produtos",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "frontend",
+    "crud",
+    "produtos"
+  ],
+  "author": "Thiago Alves",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^7.0.1",
+    "express": "^5.3.0",
+    "nodemon": "^3.1.14"
+  }
+}
