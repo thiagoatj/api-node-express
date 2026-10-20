@@ -168,4 +168,10 @@ api_demo_flight/
   .env.example
   .gitignore
 ```
+## Observação sobre a carga de dados
 
+O banco `demo_flight` foi criado com uma carga reduzida de dados de teste
+(4 usuários, 5 aeronaves, 20 passageiros, 3 voos e 3 cartões de embarque).
+O código da API é independente do volume de dados: ao importar o script
+completo (50 aeronaves, 10.000 passageiros, 500 voos e 10.000 cartões),
+todas as rotas funcionam sem alteração.
