@@ -1,6 +1,6 @@
---------------------------------------
+-- ------------------------------------
 -- SCRIPT MYSQL - demo_flight DATABASE
---------------------------------------
+-- ------------------------------------
 
 -- Criacao do banco de dados se nao existir
 CREATE DATABASE IF NOT EXISTS demo_flight;
@@ -63,9 +63,9 @@ CREATE TABLE boarding_pass (
         ON UPDATE CASCADE
 );
 
------------------------
+-- ---------------------
 -- Populando as tabelas
------------------------
+-- ---------------------
 
 -- Tabela de usuarios (Insert otimizado em lote)
 INSERT INTO sys_user (name, login_email, password, user_type) VALUES 
